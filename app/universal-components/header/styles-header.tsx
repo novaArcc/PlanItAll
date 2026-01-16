@@ -5,18 +5,15 @@ const styles = StyleSheet.create({
     headerContainer: {
         width: "100%",
         height: 55,
-        paddingHorizontal: 23,
-        backgroundColor: "#fff",
+        paddingHorizontal: 16,
         flexDirection: "row",
         justifyContent: "flex-end",
         alignItems: "center"
     },
     addIcon: {
-        backgroundColor: "#fff",
-        padding: 4,
+        padding: 6,
         borderRadius: "50%",
-        borderColor: variables.colors.primaryColor1,
-        borderWidth: 1
+        backgroundColor: variables.colors.primaryColor1,
     }
 })
 

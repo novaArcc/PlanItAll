@@ -1,3 +1,4 @@
+import variables from '@/assets/variables/variables';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Tabs } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -7,7 +8,7 @@ export default function TabsLayout() {
   return (
 <>
     <StatusBar style="auto" />
-    <Tabs>
+    <Tabs screenOptions={{  tabBarActiveTintColor: variables.colors.primaryColor1, tabBarActiveBackgroundColor: variables.colors.whiteBackgroundColor, tabBarInactiveBackgroundColor: variables.colors.whiteBackgroundColor}}>
       <Tabs.Screen name="index" options={{ title: "Assessments", headerShown: false,  tabBarHideOnKeyboard: true,
     tabBarIcon: ({ color, size }) => (
       <Ionicons name="school" size={size} color={color} />
