@@ -25,8 +25,8 @@ const OneFolder = (props: Props) => {
     return (
         <TouchableOpacity style={styles.oneFolder}>
             <Text style={styles.folderName}>{props.name}{props.assessmentName}{props.recipeName}{props.shoppingListName}{props.todoListName}{props.tripName}</Text>
-            <Text style={styles.folderSubtitle}>{props.assessmentModule}{props.recipeCourse}{props.tripDate?.toString()}</Text>
-            <Text style={styles.folderSubSubtitle}>{props.assessmentDueDate?.toString()}{props.recipeRating}</Text>
+            <Text style={styles.folderSubtitle}>{props.assessmentModule}{props.recipeCourse}{props.tripDate}</Text>
+            <Text style={styles.folderSubSubtitle}>{props.assessmentDueDate}{props.recipeRating}</Text>
         </TouchableOpacity>
     )
 }
