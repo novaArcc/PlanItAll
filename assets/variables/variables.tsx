@@ -1,7 +1,7 @@
-const Variables = {
+const variables = {
   colors: {
-
+    primaryColor1: "#ba1a8a"
   }
 }
 
-export default Variables
+export default variables

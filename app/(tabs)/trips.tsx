@@ -1,12 +1,20 @@
-import React from 'react'
-import { View, Text } from 'react-native'
-import styles from './styles-all-trips'
+import React from 'react';
+import { ScrollView } from 'react-native';
+import OneFolder from '../universal-components/one-folder/one-folder';
+import tabStyles from '../universal-styles/styles-tabs';
+import Header from '../universal-components/header/header';
 
 const AllTrips = () => {
+
+const date = new Date()
+
   return (
-    <View>
-      <Text>This is the All Trips Page!</Text>
-    </View>
+    <>
+    <Header></Header>
+    <ScrollView contentContainerStyle={tabStyles.tabContainer}>
+      <OneFolder tripName="Trip 1" tripDate={date.toLocaleDateString()}></OneFolder>
+    </ScrollView>
+    </>
   )
 }
 
