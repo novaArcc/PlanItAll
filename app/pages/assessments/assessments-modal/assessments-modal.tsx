@@ -44,9 +44,14 @@ const assessmentsModal = (props: Props) => {
                                 <TextInput style={styles.assessmentNameAndTypeTextInput}></TextInput>
                             </View>
 
-                            <View style={styles.assessmentModuleContainer}>
-                                <Text style={styles.assessmentModule}>Module name:</Text>
-                                <TextInput style={styles.assessmentModuleTextInput}></TextInput>
+                            <View style={styles.assessmentModuleAndWeightingContainer}>
+                                <Text style={styles.assessmentModuleAndWeighting}>Module name:</Text>
+                                <TextInput style={styles.assessmentModuleAndWeightingTextInput}></TextInput>
+                            </View>
+
+                            <View style={styles.assessmentModuleAndWeightingContainer}>
+                                <Text style={styles.assessmentModuleAndWeighting}>Final grade weighting:</Text>
+                                <TextInput style={styles.assessmentModuleAndWeightingTextInput}></TextInput>
                             </View>
 
                            <View style={styles.assessmentDueDateContainer}>
