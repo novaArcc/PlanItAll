@@ -1,31 +1,19 @@
 import React, { useState } from 'react'
 import { ScrollView, Modal, Pressable, View, Text, TextInput } from 'react-native'
-import styles from './styles-assessments-modal'
+import styles from '../../../components/assessments-components/assessments-modal/styles-assessments-modal'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
 import Foundation from '@expo/vector-icons/Foundation';
 import variables from '@/assets/variables/variables';
+import { router } from 'expo-router';
 
-export interface Props {
-    modalVisible: boolean,
-    setModalVisible: React.Dispatch<React.SetStateAction<boolean>>
-}
 
-const assessmentsModal = (props: Props) => {
+const addAssessment = () => {
 
 
 
     return (
         <SafeAreaProvider>
-            <SafeAreaView style={styles.centeredView}>
-                <Modal
-                    animationType="slide"
-                    transparent={true}
-                    visible={props.modalVisible}
-                    statusBarTranslucent={true}
-                    onRequestClose={() => {
-                        props.setModalVisible(!props.modalVisible);
-                    }}>
                     <SafeAreaView style={styles.centeredView}>
                         <View style={styles.modalView}>
                              {/*assessment details input */}
@@ -67,16 +55,14 @@ const assessmentsModal = (props: Props) => {
 
                             <Pressable
                                 style={[styles.button, styles.buttonClose]}
-                                onPress={() => props.setModalVisible(!props.modalVisible)}>
+                                onPress={() => router.back()}>
                                 <Text style={styles.textStyle}>Add assessment</Text>
                             </Pressable>
                             </ScrollView>
                         </View>
                     </SafeAreaView>
-                </Modal>
-            </SafeAreaView>
         </SafeAreaProvider>
     )
 }
 
-export default assessmentsModal
+export default addAssessment
