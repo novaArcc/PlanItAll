@@ -69,16 +69,16 @@ const styles = StyleSheet.create({
         boxShadow: variables.shadows.textInputShadow,
         backgroundColor: variables.colors.textInputBackground
     },
-    assessmentModuleContainer: {
+    assessmentModuleAndWeightingContainer: {
         width: "95%"
     },
-    assessmentModule: {
+    assessmentModuleAndWeighting: {
         fontSize: variables.fontSizes.inputHeader,
         marginTop: 10,
         marginBottom: 10,
         fontWeight: 500
     },
-    assessmentModuleTextInput: {
+    assessmentModuleAndWeightingTextInput: {
         height: 35,
         fontSize: variables.fontSizes.inputHeader,
         padding: 5,
