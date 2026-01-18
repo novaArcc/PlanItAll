@@ -9,7 +9,7 @@ const variables = {
   },
   fontSizes: {
     inputHeader: 19
-  }
+  },
 }
 
 export default variables

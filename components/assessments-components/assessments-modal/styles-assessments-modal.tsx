@@ -40,14 +40,16 @@ const styles = StyleSheet.create({
     titleContainer: {
         width: "100%",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
         paddingBottom: 20,
         marginTop: 30,
-        gap: 12,
+    },
+    titleAndIcon: {
+    flexDirection:"row",
     },
     addNewAssessment: {
-        fontSize: 24,
+        fontSize: 22,
         fontWeight: 600
     },
     addAssessmentIcon: {
