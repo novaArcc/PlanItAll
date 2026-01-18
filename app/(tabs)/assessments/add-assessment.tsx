@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import { ScrollView, Modal, Pressable, View, Text, TextInput } from 'react-native'
+import React from 'react'
+import { ScrollView, TouchableOpacity, Pressable, View, Text, TextInput } from 'react-native'
 import styles from '../../../components/assessments-components/assessments-modal/styles-assessments-modal'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
 import Foundation from '@expo/vector-icons/Foundation';
 import variables from '@/assets/variables/variables';
 import { router } from 'expo-router';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 
 const addAssessment = () => {
@@ -18,8 +19,9 @@ const addAssessment = () => {
                         <View style={styles.modalView}>
                              {/*assessment details input */}
                              <ScrollView contentContainerStyle={styles.scrollView}>
-                             <View style={styles.titleContainer}><Text style={styles.addNewAssessment}>Add a New Assessessment</Text> 
+                             <View style={styles.titleContainer}><TouchableOpacity onPress={() => router.back()}><AntDesign name="close" size={24} color="black" /></TouchableOpacity><View style={{flexDirection: "row", gap: 12}}><Text style={styles.addNewAssessment}>Add a New Assessessment</Text> 
                              <Foundation name="pencil" tyle={styles.addAssessmentIcon} size={28} color={variables.colors.primaryColor1} /></View>
+                             <View></View></View>
                         
                              <View style={{ width: "100%", alignItems: "center" }}>
                             <View style={styles.assessmentNameAndTypeContainer}>

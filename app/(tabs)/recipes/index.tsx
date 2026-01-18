@@ -9,9 +9,9 @@ import { router } from 'expo-router';
 const AllRecipes = () => {
   return (
      <SafeAreaView style={tabStyles.appContainer}>
-    <Header></Header>
+    <Header onAddButtonClicked={() => router.push("/(tabs)/recipes/add-recipe")}></Header>
     <ScrollView contentContainerStyle={tabStyles.tabContainer}>
-      <OneFolder onPress={() => router.push("/(tabs)/recipes/one-recipe")} recipeName="Recipe 1" recipeCourse='Starter' recipeRating='4/10'></OneFolder>
+      <OneFolder recipeName="Recipe 1" recipeCourse='Starter' recipeRating='4/10'></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )
