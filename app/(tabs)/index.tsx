@@ -5,15 +5,18 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const AllShoppingLists = () => {
+const AllTrips = () => {
+
+const date = new Date()
+
   return (
      <SafeAreaView style={tabStyles.appContainer}>
     <Header></Header>
-     <ScrollView contentContainerStyle={tabStyles.tabContainer}>
-      <OneFolder shoppingListName="Shopping List 1"></OneFolder>
+    <ScrollView contentContainerStyle={tabStyles.tabContainer}>
+      <OneFolder tripName="Trip 1" tripDate={date.toLocaleDateString()}></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )
 }
 
-export default AllShoppingLists
+export default AllTrips

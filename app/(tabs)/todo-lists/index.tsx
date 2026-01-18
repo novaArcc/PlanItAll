@@ -4,19 +4,17 @@ import Header from '@/components/universal-components/header/header';
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { router } from 'expo-router';
 
-const AllTrips = () => {
-
-const date = new Date()
-
+const AllTodoLists = () => {
   return (
      <SafeAreaView style={tabStyles.appContainer}>
-    <Header></Header>
-    <ScrollView contentContainerStyle={tabStyles.tabContainer}>
-      <OneFolder tripName="Trip 1" tripDate={date.toLocaleDateString()}></OneFolder>
+    <Header onAddButtonClicked={() => router.push("/(tabs)/todo-lists/add-todo-list")}></Header>
+     <ScrollView contentContainerStyle={tabStyles.tabContainer}>
+      <OneFolder todoListName="Todo List 1"></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )
 }
 
-export default AllTrips
+export default AllTodoLists
