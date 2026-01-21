@@ -1,0 +1,70 @@
+import React from 'react'
+import { ScrollView, TouchableOpacity, Pressable, View, Text, TextInput } from 'react-native'
+import styles from '../../../components/assessments-components/assessments-modal/styles-assessments-modal'
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import RNDateTimePicker from '@react-native-community/datetimepicker';
+import Foundation from '@expo/vector-icons/Foundation';
+import variables from '@/assets/variables/variables';
+import { router } from 'expo-router';
+import AntDesign from '@expo/vector-icons/AntDesign';
+
+
+const addTrip = () => {
+
+
+
+    return (
+        <SafeAreaProvider>
+                    <SafeAreaView style={styles.centeredView}>
+                        <View style={styles.modalView}>
+                             {/*assessment details input */}
+                             <ScrollView contentContainerStyle={styles.scrollView}>
+                             <View style={styles.titleContainer}><TouchableOpacity onPress={() => router.back()}><AntDesign name="close" size={24} color="black" /></TouchableOpacity><View style={{flexDirection: "row", gap: 12}}><Text style={styles.addNewAssessment}>Add a New Assessessment</Text> 
+                             <Foundation name="pencil" tyle={styles.addAssessmentIcon} size={28} color={variables.colors.primaryColor1} /></View>
+                             <View></View></View>
+                        
+                             <View style={{ width: "100%", alignItems: "center" }}>
+                            <View style={styles.assessmentNameAndTypeContainer}>
+                                <Text style={styles.assessmentNameAndType}>Assessment name:</Text>
+                                <TextInput style={styles.assessmentNameAndTypeTextInput}></TextInput>
+                            </View>
+
+                            <View style={styles.assessmentNameAndTypeContainer}>
+                                <Text style={styles.assessmentNameAndType}>Assessment type:</Text>
+                                <TextInput style={styles.assessmentNameAndTypeTextInput}></TextInput>
+                            </View>
+
+                            <View style={styles.assessmentModuleAndWeightingContainer}>
+                                <Text style={styles.assessmentModuleAndWeighting}>Module name:</Text>
+                                <TextInput style={styles.assessmentModuleAndWeightingTextInput}></TextInput>
+                            </View>
+
+                            <View style={styles.assessmentModuleAndWeightingContainer}>
+                                <Text style={styles.assessmentModuleAndWeighting}>Final grade weighting:</Text>
+                                <TextInput style={styles.assessmentModuleAndWeightingTextInput}></TextInput>
+                            </View>
+
+                           <View style={styles.assessmentDueDateContainer}>
+                            <Text style={styles.assessmentDueDate}>Due date:</Text>
+                            <RNDateTimePicker  accentColor={variables.colors.primaryColor1}value={new Date()}></RNDateTimePicker>
+                           </View>
+
+                           <View style={styles.assessmentNotesContainer}>
+                            <Text style={styles.assessmentNotes}>Notes:</Text>
+                            <TextInput multiline={true} style={styles.assessmentNotesTextInput}></TextInput>
+                           </View>
+                           </View>
+
+                            <Pressable
+                                style={[styles.button, styles.buttonClose]}
+                                onPress={() => router.back()}>
+                                <Text style={styles.textStyle}>Add assessment</Text>
+                            </Pressable>
+                            </ScrollView>
+                        </View>
+                    </SafeAreaView>
+        </SafeAreaProvider>
+    )
+}
+
+export default addTrip

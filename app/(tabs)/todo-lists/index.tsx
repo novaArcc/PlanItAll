@@ -5,13 +5,19 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
+import AddFolder from '@/components/universal-components/add-folder/add-folder';
 
 const AllTodoLists = () => {
+
+const image = require("../../../assets/images/todo-lists-placeholder.jpg")
+
+
   return (
      <SafeAreaView style={tabStyles.appContainer}>
-    <Header onAddButtonClicked={() => router.push("/(tabs)/todo-lists/add-todo-list")}></Header>
+    <Header></Header>
      <ScrollView contentContainerStyle={tabStyles.tabContainer}>
-      <OneFolder todoListName="Todo List 1"></OneFolder>
+      <AddFolder label="Add Todo List" onAddButtonPressed={() => router.push("/(tabs)/todo-lists/add-todo-list")}></AddFolder>
+      <OneFolder image={image} todoListName="Todo List 1"></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )

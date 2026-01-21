@@ -25,7 +25,7 @@ export default function TabsLayout() {
     tabBarIcon: ({ color, size }) => (
       <Ionicons name="checkbox-outline" size={size} color={color} />
     ),}}></Tabs.Screen>
-      <Tabs.Screen name="index" options={{ title: "Trips", headerShown: false,  tabBarHideOnKeyboard: true,
+      <Tabs.Screen name="trips" options={{ title: "Trips", headerShown: false,  tabBarHideOnKeyboard: true,
     tabBarIcon: ({ color, size }) => (
       <Ionicons name="airplane-outline" size={size} color={color}/>
     ),}}></Tabs.Screen>

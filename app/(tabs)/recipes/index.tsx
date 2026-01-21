@@ -5,13 +5,19 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
+import AddFolder from '@/components/universal-components/add-folder/add-folder';
 
 const AllRecipes = () => {
+
+const image = require("../../../assets/images/add-recipe-placeholder.jpg")
+
+
   return (
      <SafeAreaView style={tabStyles.appContainer}>
-    <Header onAddButtonClicked={() => router.push("/(tabs)/recipes/add-recipe")}></Header>
+    <Header></Header>
     <ScrollView contentContainerStyle={tabStyles.tabContainer}>
-      <OneFolder recipeName="Recipe 1" recipeCourse='Starter' recipeRating='4/10'></OneFolder>
+      <AddFolder label="Add Recipe" onAddButtonPressed={() => router.push("/(tabs)/recipes/add-recipe")}></AddFolder>
+      <OneFolder image={image} recipeName="Recipe 1" recipeCourse='Starter' recipeRating='4/10'></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )
