@@ -1,20 +1,21 @@
 import React from 'react'
-import { TouchableOpacity, View } from 'react-native'
+import { View, Text } from 'react-native'
 import styles from './styles-header'
-import Ionicons from '@expo/vector-icons/Ionicons';
-import variables from '@/assets/variables/variables';
-
-export interface Props {
-    onAddButtonClicked?: () => void
-}
+import { useFonts } from "expo-font";
 
 
-const Header = (props: Props) => {
+const Header = () => {
+ const [fontsLoaded] = useFonts({
+    "MomoSignature-Regular": require("../../../assets/fonts/MomoSignature-Regular.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <View style={styles.headerContainer}>
-        <TouchableOpacity onPress={props.onAddButtonClicked}>
-        <Ionicons style={styles.addIcon} name="add" size={24} color={variables.colors.whiteBackgroundColor} />
-        </TouchableOpacity>
+      <Text style={styles.planItAll}>PlanItAll</Text>
     </View>
   )
 }

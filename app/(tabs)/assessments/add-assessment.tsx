@@ -11,8 +11,6 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 
 const addAssessment = () => {
 
-
-
     return (
         <SafeAreaProvider>
                     <SafeAreaView style={styles.centeredView}>

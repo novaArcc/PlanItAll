@@ -17,7 +17,7 @@ export default function TabsLayout() {
     tabBarIcon: ({ color, size }) => (
       <Ionicons name="fast-food-outline" size={size} color={color} />
     ), }}></Tabs.Screen>
-      <Tabs.Screen name="index" options={{ title: "Shopping", headerShown: false,  tabBarHideOnKeyboard: true,
+      <Tabs.Screen name="shopping-lists" options={{ title: "Shopping", headerShown: false,  tabBarHideOnKeyboard: true,
     tabBarIcon: ({ color, size }) => (
       <Ionicons name="cart-outline" size={size} color={color} />
     ), }}></Tabs.Screen>

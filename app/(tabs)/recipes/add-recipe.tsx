@@ -16,7 +16,6 @@ const addRecipe = () => {
     <SafeAreaProvider>
       <SafeAreaView style={sharedStyles.centeredView}>
         <View style={sharedStyles.modalView}>
-          {/*assessment details input */}
           <ScrollView contentContainerStyle={sharedStyles.scrollView}>
 
             <View style={sharedStyles.titleContainer}><TouchableOpacity onPress={() => router.back()}><AntDesign name="close" size={24} color="black" /></TouchableOpacity><View style={{ flexDirection: "row", gap: 12 }}><Text style={sharedStyles.addNewAssessment}>Add a New Recipe</Text>

@@ -1,4 +1,3 @@
-import variables from "@/assets/variables/variables";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -7,13 +6,14 @@ const styles = StyleSheet.create({
         height: 55,
         paddingHorizontal: 16,
         flexDirection: "row",
-        justifyContent: "flex-end",
+        justifyContent: "center",
         alignItems: "center"
     },
-    addIcon: {
-        padding: 6,
-        borderRadius: "50%",
-        backgroundColor: variables.colors.primaryColor1,
+    planItAll: {
+        color: "#1e010e",
+        fontWeight: 600,
+        fontSize: 18,
+        fontFamily: "MomoSignature-Regular"
     }
 })
 
