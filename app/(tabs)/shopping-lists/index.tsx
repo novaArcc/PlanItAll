@@ -17,7 +17,7 @@ const image = require("../../../assets/images/shopping-lists-placeholder.jpg")
     <Header></Header>
      <ScrollView contentContainerStyle={tabStyles.tabContainer}>
       <AddFolder label="Add Shopping List" onAddButtonPressed={() => router.push("/(tabs)/shopping-lists/add-shopping-list")}></AddFolder>
-      <OneFolder image={image} shoppingListName="Shopping List 1"></OneFolder>
+      <OneFolder onPress={() => router.push("/(tabs)/shopping-lists/shopping-list")} image={image} shoppingListName="Shopping List 1"></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )

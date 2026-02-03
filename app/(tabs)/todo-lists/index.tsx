@@ -17,7 +17,7 @@ const image = require("../../../assets/images/todo-lists-placeholder.jpg")
     <Header></Header>
      <ScrollView contentContainerStyle={tabStyles.tabContainer}>
       <AddFolder label="Add Todo List" onAddButtonPressed={() => router.push("/(tabs)/todo-lists/add-todo-list")}></AddFolder>
-      <OneFolder image={image} todoListName="Todo List 1"></OneFolder>
+      <OneFolder onPress={() => router.push("/(tabs)/todo-lists/todo-list")} image={image} todoListName="Todo List 1"></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )

@@ -1,3 +1,4 @@
+import variables from "@/assets/variables/variables";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     planItAll: {
-        color: "#1e010e",
+        color: variables.colors.appNameColor,
         fontWeight: 600,
         fontSize: 18,
         fontFamily: "MomoSignature-Regular"

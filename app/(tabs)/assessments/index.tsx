@@ -20,7 +20,7 @@ const date = new Date()
     <Header></Header>
     <ScrollView contentContainerStyle={tabStyles.tabContainer}>
       <AddFolder label="Add Assessment" onAddButtonPressed={() => router.push("/(tabs)/assessments/add-assessment")}></AddFolder>
-      <OneFolder image={image} assessmentName="Assessment 1" assessmentModule="Module 1" assessmentDueDate={date.toLocaleDateString()}></OneFolder>
+      <OneFolder onPress={() => router.push("/(tabs)/assessments/assessment")} image={image} assessmentName="Assessment 1" assessmentModule="Module 1" assessmentDueDate={date.toLocaleDateString()}></OneFolder>
     </ScrollView>
     </SafeAreaView>
   );

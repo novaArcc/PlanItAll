@@ -1,6 +1,6 @@
 import { router } from 'expo-router'
 import React from 'react'
-import { View, Text, Pressable, ScrollView, TextInput, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Pressable, ScrollView, TextInput, TouchableOpacity } from 'react-native'
 import sharedStyles from "@/components/assessments-components/assessments-modal/styles-assessments-modal"
 import variables from '@/assets/variables/variables'
 import Foundation from '@expo/vector-icons/Foundation'

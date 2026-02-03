@@ -2,7 +2,8 @@ const variables = {
   colors: {
     primaryColor1: "#ba1a8a",
     whiteBackgroundColor: "#FFFDF7",
-    textInputBackground: "#fcfcfc"
+    textInputBackground: "#fcfcfc",
+    appNameColor: "#1e010e"
   },
   shadows: {
     textInputShadow: "0 0 2px #a6a3a8",

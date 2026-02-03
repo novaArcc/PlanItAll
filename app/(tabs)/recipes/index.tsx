@@ -17,7 +17,7 @@ const image = require("../../../assets/images/add-recipe-placeholder.jpg")
     <Header></Header>
     <ScrollView contentContainerStyle={tabStyles.tabContainer}>
       <AddFolder label="Add Recipe" onAddButtonPressed={() => router.push("/(tabs)/recipes/add-recipe")}></AddFolder>
-      <OneFolder image={image} recipeName="Recipe 1" recipeCourse='Starter' recipeRating='4/10'></OneFolder>
+      <OneFolder onPress={() => router.push("/(tabs)/recipes/recipe")} image={image} recipeName="Recipe 1" recipeCourse='Starter' recipeRating='4/10'></OneFolder>
     </ScrollView>
     </SafeAreaView>
   )
